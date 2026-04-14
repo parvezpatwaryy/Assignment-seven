@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import themes from './../../node_modules/daisyui/theme/object.d';
 import Navbar from "@/componants/shared/Navbar";
+import Footer from "@/componants/footer/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +29,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
         {children}
-      <h2 className="bg-purple-500 text-center py-7 w-[1600] mx-auto
-      ">Footer</h2>
+        <Footer></Footer>
         </body>
     </html>
   );
