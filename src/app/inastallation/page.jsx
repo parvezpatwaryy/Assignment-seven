@@ -5,7 +5,7 @@ export const metadata = {
 };
 const InastallationPage = () => {
   return (
-    <div className='w-[1600] mx-auto'>
+    <div className='sm:w-[600] lg:w-[1600] mx-auto'>
       <h2 className='text-black'>Inastallation page</h2>
     </div>
   );

@@ -5,12 +5,12 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className='w-[1600] mx-auto bg-[#244D3F] pt-10'>
+    <div className='sm:w-[600] lg:w-[1600] mx-auto bg-[#244D3F] pt-10'>
       <div className='text-center space-y-5'>
-        <h1 className='font-bold text-5xl'>KeenKeeper</h1>
+        <h1 className='font-bold text-5xl text-white'>KeenKeeper</h1>
         <p className='text-gray-300'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
-        <h3 className='font-semibold'>Social Links</h3></div>
-      <div className="flex gap-3 justify-center pt-3">
+        <h3 className='font-semibold text-white'>Social Links</h3></div>
+      <div className="flex gap-3 justify-center text-white pt-3">
         <p><FaInstagram /></p>
         <p><FaFacebook /></p>
         <p><FaXTwitter /></p>
