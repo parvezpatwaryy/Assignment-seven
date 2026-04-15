@@ -33,8 +33,8 @@ const TimelinePage = () => {
       <div className="space-y-4 sm:w-50 lg:w-250">
         {activities.length > 0 ? (
           activities.map((item) => (
-            <div key={item.id} className="flex  items-center gap-6 p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow group relative">
-              <div className="text-3xl bg-gray-50 p-4 rounded-full">
+            <div key={item.id} className="flex items-center gap-6 p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow group relative">
+              <div className="text-3xl grid sm:grid-cols-1 bg-gray-50 p-4 rounded-full">
                 {item.type === 'Call' && '📞'}
                 {item.type === 'Text' && '💬'}
                 {item.type === 'Video' && '📹'}

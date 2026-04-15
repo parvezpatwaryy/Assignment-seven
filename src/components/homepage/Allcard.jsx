@@ -1,4 +1,5 @@
 "use client";
+import toast, { Toaster } from 'react-hot-toast';
 import React, { useState } from 'react';
 import books from '../../../public/booksData.json';
 
@@ -19,7 +20,7 @@ const Allcard = () => {
     const existingTimeline = JSON.parse(localStorage.getItem('timelineData') || '[]');
     const updatedTimeline = [newActivity, ...existingTimeline];
     localStorage.setItem('timelineData', JSON.stringify(updatedTimeline));
-    alert(`${type} record for ${name} added to Timeline!`);
+    toast.success(`${type} record for ${name} added to Timeline!`);
   };
   const statusStyles = {
     work: 'bg-[#CBFADB] text-green-800',
@@ -29,9 +30,12 @@ const Allcard = () => {
   };
 
   if (selectedBook) {
+    
     return (
+      
       <div className='my-12  max-w-7xl mx-auto px-6 font-sans bg-[#F8FAFB] min-h-screen p-6 md:p-10 rounded-20 md:rounded-[50px]'>
-        <div className="grid grid-cols-1 sm:w-50 lg:w-250 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <Toaster />
+        <div className="grid grid-cols-1 sm:w-50 md:w-100 lg:w-250 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <div className="flex flex-col  gap-6">
             <div className="bg-white  p-8 rounded-[40px] shadow-sm border border-gray-100 flex flex-col items-center text-center">
               <img src={selectedBook.img} alt="" className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-gray-50 shadow-md" />
